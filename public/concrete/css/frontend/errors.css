@@ -1,0 +1,14 @@
+div.alert-success {
+    border: 1px solid #05A000 !important;
+    background-color: #B5ECB4 !important;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+div.alert-error,
+div.alert-danger {
+    border: 1px solid #004313 !important;
+    background-color: #95ECAE !important;
+    padding: 8px;
+    margin-bottom: 8px;
+}

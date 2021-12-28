@@ -1,0 +1,26 @@
+1.0
+- Initial Release
+
+2.0 - 4/15/2015
+- Fixed support for 5.7.4
+- Added the ability to specify region
+- Added the ability to make urls expire
+
+2.0.1 - 7/17/2015
+- Fixed support for 5.7.5
+- Updated dependencies
+
+2.0.2 - 12/27/2015
+- Added support for arbitrary hosts (Thanks Hissy)
+
+3.0 - 5/1/2016
+- Support for v8 (does not work on v5.7)
+
+3.0.1 - 1/18/2017
+- Support for v8.1 (thumbnails and removes legacy autoloader)
+
+3.0.2 - 2/15/2017
+- Add support for IAM roles
+
+3.0.3 - 9/14/2018
+- Update dependencies for PHP 7.2 support

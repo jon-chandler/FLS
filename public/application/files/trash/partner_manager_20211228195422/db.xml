@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.concrete5.org/doctrine-xml/0.5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.concrete5.org/doctrine-xml/0.5 http://concrete5.github.io/doctrine-xml/doctrine-xml-0.5.xsd">
+
+	<table name="btPartnerManager">
+		<field name="sID" type="integer" size="10">
+			<unsigned/>
+			<autoincrement/>
+			<key/>
+		</field>
+		<field name="partner" type="text"> </field>
+		<field name="link" type="text"> </field>
+		<field name="partner_type" type="text"> </field>
+		<field name="partner_offerings" type="text"> </field>
+		<field name="locations" type="text"> </field>
+		<field name="active" type="boolean"> </field>
+		<field name="partner_logo" type="integer"></field>
+		<field name="hp_percent" type="float"></field>
+		<field name="body_styles" type="text"></field>
+		<field name="sortOrder" type="integer"></field>
+		 <index name="sID">
+            <col>sID</col>
+            <col>sortOrder</col>
+        </index>
+	</table>
+</schema>

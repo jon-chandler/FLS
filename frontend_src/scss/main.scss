@@ -1,0 +1,19 @@
+
+html, body {
+  	overflow-x: hidden;
+	-webkit-tap-highlight-color: transparent;
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	background: pink;
+} 
+
+html {
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	
+	@media (hover: none) and (pointer: none) {
+    	overflow-y: initial !important;
+	}
+
+}

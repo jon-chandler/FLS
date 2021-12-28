@@ -1,0 +1,24 @@
+{
+  "name": "Karfu",
+  "version": "1.0.0",
+  "description": "Karfu-CMS",
+  "main": "watch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Chandler",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "howler": "^2.1.3",
+    "postcss": "^6.0.11",
+    "watch": "^1.0.2",
+    "webpack": "^3.6.0"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
