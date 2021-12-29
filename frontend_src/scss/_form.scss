@@ -70,5 +70,28 @@ main {
 			}
 		}
 
+
+		@media only screen and (max-width: $media-s) {
+			fieldset {
+				display: block;
+				width: 100%;
+
+				.form-group {
+					display: block;
+					width: 100%;
+					max-width: 100%;
+					padding: 0;
+					margin-bottom: $contentPadding;
+				}
+
+				input, select, textarea {
+					padding: 10px;
+					width: calc(100% - 20px) !important;
+				}
+			}
+
+		}
+
+
 	}
 }
