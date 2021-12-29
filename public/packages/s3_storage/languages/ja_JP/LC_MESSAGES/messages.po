@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: S3 Storage 2.0.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-28 13:19+0900\n"
+"PO-Revision-Date: 2015-12-28 13:29+0900\n"
+"Last-Translator: Takuro Hishikawa <hishikawa@concrete5.co.jp>\n"
+"Language-Team: \n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: t;t2:1,2;tc:1c,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-SearchPath-0: ../../..\n"
+"X-Poedit-SearchPathExcluded-0: ../../../vendor\n"
+
+#: ../../../controller.php:25
+msgid "File storage using Amazon S3."
+msgstr "Amazon S3を使ったファイルストレージ。"
+
+#: ../../../controller.php:30
+msgid "S3 Storage"
+msgstr "S3ストレージ"
+
+#: ../../../controller.php:49
+msgid "You forgot to run composer :/"
+msgstr "composerの実行をお忘れのようです :/"
+
+#: ../../../elements/storage_location_types/s3.php:15
+msgid "This optional field is where you can specify a AWS region. If left blank the Amazon SDK does its own thing."
+msgstr ""
+"このオプション項目は、AWSのリージョンを指定することができます。空のままにしても、Amazon SDKが自動的に判断します。"
+
+#: ../../../elements/storage_location_types/s3.php:20
+#, php-format
+msgid ""
+"<b>Note:</b> Bucket permissions must be configured properly for this to actually take effect. When enabled, you can "
+"enter any string accepted by %s. When not enabled, your bucket permissions must be configured to allow the public "
+"viewing of files. If you need some files to be restricted, I would suggest having two buckets and two storage "
+"locations."
+msgstr ""
+"<b>注意:</b> この機能を作動させるためには、必ず事前にバケット権限を正しく設定してください。オプションを有効にする"
+"と、%sによって使用できる任意の文字列を入力できます。有効でない場合、バケットのアクセス許可はファイルがパブリックに閲"
+"覧できるように設定する必要があります。もし一部のファイルを制限したい場合は、２つのバケットを作成し、２つのファイル保"
+"存場所を設定することをお勧めします。"
+
+#: ../../../elements/storage_location_types/s3.php:28
+msgid ""
+"This optional field is where you can specify a host to be used (such as a Cloudfront host) instead of the normal S3 "
+"hostname when generating asset URIs. This can only be used with non-expiring urls."
+msgstr ""
+"このオプション項目は、アセットのURIが生成される際に、通常のS3のホスト名の代わりに、特定のホストを指定することができま"
+"す (例えば、Cloudfrontのホスト) 。この項目は、有効期間のないURLにのみ影響します。"
+
+#: ../../../elements/storage_location_types/s3.php:33
+msgid "Optional unless checked"
+msgstr "オプションを有効にするにはチェックしてください"
+
+#: ../../../elements/storage_location_types/s3.php:42
+msgid "Bucket"
+msgstr "バケット"
+
+#: ../../../elements/storage_location_types/s3.php:49
+msgid "Key"
+msgstr "キー"
+
+#: ../../../elements/storage_location_types/s3.php:56
+msgid "Secret"
+msgstr "シークレット"
+
+#: ../../../elements/storage_location_types/s3.php:63
+msgid "AWS Region"
+msgstr "AWSリージョン"
+
+#: ../../../elements/storage_location_types/s3.php:68
+msgid "Optional"
+msgstr "オプション"
+
+#: ../../../elements/storage_location_types/s3.php:72
+msgid "Alternate Host"
+msgstr "代替ホスト"
+
+#: ../../../elements/storage_location_types/s3.php:77
+msgid "Optional. E.g. http://s3.example.com"
+msgstr "オプション。例: http://s3.example.com"
+
+#: ../../../elements/storage_location_types/s3.php:81
+msgid "Link Expire Time"
+msgstr "リンク有効期間"
+
+#: ../../../src/S3Storage/S3Configuration.php:63
+msgid "You must set a S3 Bucket."
+msgstr "S3バケットを設定してください。"
+
+#: ../../../src/S3Storage/S3Configuration.php:65
+msgid "Invalid S3 Bucket Name"
+msgstr "無効なS3バケット名です。"
+
+#: ../../../src/S3Storage/S3Configuration.php:68
+msgid "You must set a S3 Key."
+msgstr "S3キーを設定してください。"
+
+#: ../../../src/S3Storage/S3Configuration.php:71
+msgid "You must set a S3 Secret."
+msgstr "S3シークレットを設定してください。"
+
+#: ../../../src/S3Storage/S3Configuration.php:74
+msgid "Invalid Expire Time"
+msgstr "無効な有効期間です。"
+
+# Don't change this, please use same words with concrete5 core translation. see www.transifex.com/projects/p/concrete5/
+#~ msgid "Access Denied."
+#~ msgstr "アクセス拒否"

@@ -17,16 +17,13 @@
 		$adminUser = true;
 	}
 
-	//$this->addFooterItem($html->javascript($this->getThemePath() . '/js/bundle.js'));
+	$this->addFooterItem($html->javascript($this->getThemePath() . '/js/bundle.js'));
 
 	$siteName = Config::get('concrete.site');
 	$p = Page::getCurrentPage();
 	$link = $p->getCollectionLink();
 	$title = $p->getCollectionName();
 	$desc = $p->getCollectionDescription();
-
-	$loaderContent = $p->getAttribute('loader_content');
-
 	
 	if(!$p->isError() && $p->getCollectionID() == HOME_CID){
 		$bodyClass[] = 'homepage';
@@ -78,14 +75,11 @@
 			<meta name="twitter:description" content="<?php echo $desc; ?>">
 			<meta name="twitter:image" content="<?php echo $shareImage; ?>">
 
-
-
 			<script>
 				const pageTitle = "<?php echo $title; ?>";
 				const pageDescription = "<?php echo $desc; ?>";
 				const pageURL = "<?php echo $link; ?>";
 			</script>
-
 
 			<?php
 				View::element('header_required', [
@@ -105,7 +99,6 @@
 
 	    <?php /* DO NOT REMOVE, PAGE WRAPPER ELEMENT IS NEEDED TO ENSURE THE EDITOR MODE FUNCTIONS CORRECTLY */ ?>
 	    	<div class="site-container">
-
 	    	<div class="<?php echo $c->getPageWrapperClass()?> content-wrapper">
 	    		<noscript><div class="no-script">This site requires JavaScript</div></noscript>
 
