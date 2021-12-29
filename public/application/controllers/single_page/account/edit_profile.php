@@ -152,7 +152,7 @@ class EditProfile extends AccountPageController
 
             $ui->saveUserAttributesForm($aks);
             $ui->update($data);
-            $this->redirect('/', 'my-profile-and-searches');
+            $this->redirect('/', 'pupil');
         }
     }
 }

@@ -10,8 +10,8 @@
 	        <?php 
 
 	        	// User registered on a page that they need to get back to.. Send them back
-	        	if($_SESSION['KARFU_user']['registrationRedirect']) {
-	        		$r = new RedirectResponse($_SESSION['KARFU_user']['registrationRedirect']);
+	        	if($_SESSION['FLS_user']['registrationRedirect']) {
+	        		$r = new RedirectResponse($_SESSION['FLS_user']['registrationRedirect']);
                     $r->send();
 	        	}
 

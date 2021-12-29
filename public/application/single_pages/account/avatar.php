@@ -15,15 +15,8 @@
 
 <main>
     <div class="full-width">
-        <section class="karfu-profile restricted-content">
-            <?php
-                $nav = BlockType::getByHandle('autonav');
-                $nav->controller->displayPages = 'custom';
-                $nav->controller->displayPagesCID = $id;
-                $nav->controller->orderBy = 'display_asc';
-                $nav->render('templates/saved_content');
-            ?>    
-
+        <section class="fls-profile restricted-content">
+            
             <div class="avatar-content-wrapper">
                 <div vue-enabled>
                     <h2><?php echo $c->getCollectionName(); ?></h2>
@@ -45,7 +38,7 @@
 
                     <div class="ccm-dashboard-form-actions-wrapper">
                         <div class="ccm-dashboard-form-actions">
-                            <a href="<?php echo URL::to('/your-profile-and-searches'); ?>" /><button class="button-dark-green search data-call-btn" title="Your profile"><span>Your profile</span><div class="button-loader"></div></button></a>
+                            <a href="<?php echo URL::to('/pupil'); ?>" /><button class="button-dark-green search data-call-btn" title="Your profile"><span>Your profile</span><div class="button-loader"></div></button></a>
                         </div>
                     </div>
                 </div>
