@@ -7,6 +7,7 @@ main {
 			border-radius: $borderRadius;
 			border: 1px solid #999;
 			padding: 10px;
+			position: relative;
 
 			&::placeholder {
 				color: rgba(#999, .5);
@@ -16,6 +17,14 @@ main {
 				border: 1px solid #666 !important;
 				outline: none !important;
 			}
+		}
+
+		select {
+			width: calc(100% + 20px) !important;
+			background-repeat: no-repeat;
+			background-position: 98% 10px;
+			background-size: 20px;
+			background-image: url(../images/chevron.svg);
 		}
 
 		fieldset {
