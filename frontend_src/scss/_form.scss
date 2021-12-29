@@ -1,7 +1,23 @@
 main {
 	
 	form {
-		
+
+		input, select, textarea {
+			-webkit-appearance: none;
+			border-radius: $borderRadius;
+			border: 1px solid #999;
+			padding: 10px;
+
+			&::placeholder {
+				color: rgba(#999, .5);
+			}
+
+			&:focus, &.has-content {
+				border: 1px solid #666 !important;
+				outline: none !important;
+			}
+		}
+
 		fieldset {
 			display: flex;
 			flex-direction: row;
@@ -17,7 +33,7 @@ main {
 			min-inline-size: min-content;
 
 			.ccm-attribute-address-composer-wrapper {
-				background: pink;
+				background: #E3E3E3;
 				display: flex;
 				flex-direction: row;
 				flex-wrap: wrap;
@@ -40,9 +56,17 @@ main {
 					width: 100%;
 				}
 
-				.control-label {
-					
+				.ccm-input-time-wrapper {
+					display: none;
 				}
+
+				input[type=checkbox] {
+					width: 15px;
+					padding: 0;
+					-webkit-appearance: auto;
+					background: orange;
+				}
+
 			}
 		}
 
