@@ -2,7 +2,7 @@
 
 	defined('C5_EXECUTE') or die("Access Denied.");
 
-	$subject = t("Karfu password reset");
+	$subject = t("FLS password reset");
 	$bodyHTML = t("
 		<html>
 		<head>
@@ -13,7 +13,7 @@
 			<table width='800px' style='padding: 30px'>
 				<tr>
 					<td style='background-color: #2BD95C; padding: 30px'>
-						<img src='https://karfu-public-assets.s3.eu-west-2.amazonaws.com/email_assets/logo.png' width='120px' alt='KARFU' />
+						<img src='https://familylearningschool.s3.eu-west-2.amazonaws.com/email_assets/logo.png' width='120px' alt='KARFU' />
 					</td>
 				</tr>
 				<tr>

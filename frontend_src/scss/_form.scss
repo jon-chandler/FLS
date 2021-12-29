@@ -1,0 +1,50 @@
+main {
+	
+	form {
+		
+		fieldset {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			margin-inline-start: 0;
+			margin-inline-end: 0;
+			padding-block-start: 0;
+			padding-block-end: 0;
+			padding-inline-start: 0;
+			padding-inline-end: 0;
+			border: none;
+			min-inline-size: min-content;
+
+			.ccm-attribute-address-composer-wrapper {
+				background: pink;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				width: 100%;
+			}
+
+			legend {
+				font-size: 1.4rem;
+				width: 100%;
+			}
+
+			.form-group {
+				display: flex;
+				flex-direction: column;
+				max-width: 45%;
+				width: 45%;
+				padding: $contentPadding;
+
+				* {
+					width: 100%;
+				}
+
+				.control-label {
+					
+				}
+			}
+		}
+
+	}
+}

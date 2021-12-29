@@ -3,7 +3,7 @@
 	$v = View::getInstance();
 ?>
 
-<link rel="stylesheet" type="text/css" href="/application/themes/KARFU/css/bundle.css">
+<link rel="stylesheet" type="text/css" href="/application/themes/FLS/css/bundle.css">
 
 <style>
 	.ccm-logo, #ccm-toolbar, #ccm-account-menu {

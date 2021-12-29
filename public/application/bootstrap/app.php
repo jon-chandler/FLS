@@ -66,23 +66,11 @@
  * ----------------------------------------------------------------------------
  */
 
-use Application\Karfu\Journey\Hook\HookExecuter;
-use Application\Karfu\Journey\Hook\HookFunctionFactory;
 
 $classLoader = new \Symfony\Component\ClassLoader\Psr4ClassLoader();
-$classLoader->addPrefix('Application\\Factory', DIR_APPLICATION . '/' . DIRNAME_CLASSES . '/Factory');
-$classLoader->addPrefix('Application\\Helper', DIR_APPLICATION . '/' . DIRNAME_CLASSES . '/Helper');
-$classLoader->addPrefix('Application\\Helper\\CostCalculator', DIR_APPLICATION . '/' . DIRNAME_CLASSES . '/Helper/CostCalculator');
-$classLoader->addPrefix('Application\\Karfu', DIR_APPLICATION . '/' . DIRNAME_CLASSES . '/Karfu');
-$classLoader->addPrefix('Application\\Model', DIR_APPLICATION . '/' . DIRNAME_CLASSES . '/Model');
-$classLoader->addPrefix('Application\\Service', DIR_APPLICATION . '/' . DIRNAME_CLASSES . '/Service');
 
 $classLoader->register();
 Database::getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
 
-// Add api routes here
-$router = $app->make('router');
-$router->post('/api/process-results/process', 'Application\Controller\Api\ProcessResults::process');
-$router->post('/api/suitabilityscore/build', 'Application\Controller\Api\SuitabilityScore::build');
-$router->post('/api/shortlist/add', 'Application\Controller\Api\Shortlist::add');
-$router->post('/api/save-search/save', 'Application\Controller\Api\SaveSearch::save');
+
+
