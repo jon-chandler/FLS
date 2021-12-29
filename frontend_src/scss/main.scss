@@ -1,3 +1,6 @@
+@import '_vars';
+@import 'components/_header';
+@import 'components/_footer';
 
 html, body {
   	overflow-x: hidden;
@@ -5,8 +8,6 @@ html, body {
 	::-webkit-scrollbar {
 		display: none;
 	}
-
-	background: pink;
 } 
 
 html {
@@ -16,4 +17,22 @@ html {
     	overflow-y: initial !important;
 	}
 
+}
+
+body {
+	font-family: 'Poppins', Arial, Sans;
+	font-size: calc((1 - 1) * 1.2vw + 1rem);
+}
+
+.content-wrapper {
+	padding: $contentPadding;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover {
+		opacity: .7;
+	}
 }

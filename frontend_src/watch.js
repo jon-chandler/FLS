@@ -6,7 +6,7 @@ const sass = require('node-sass')
 const watch = require('watch')
 const webpack = require('webpack')
 
-const outputDirectory = '../public/application/themes/KARFU'
+const outputDirectory = '../public/application/themes/FLS'
 const cssPath = path.join(outputDirectory, 'css/bundle.css')
 const jsPath = path.join(outputDirectory, 'js/bundle.js')
 

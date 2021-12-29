@@ -57,6 +57,7 @@
 			<link rel="shortcut icon" href="<?php echo $view->getThemePath()?>/fls.png" />
 			<link rel="apple-touch-icon" href="<?php echo $view->getThemePath()?>/fls.png" >
 			<link rel="icon" href="<?php echo $view->getThemePath()?>/fls.ico" type="image/x-icon" >
+			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400">
 			<link rel="stylesheet" type="text/css" href="<?php echo $view->getThemePath()?>/css/font-awesome.css">
 			<link rel="stylesheet" type="text/css" href="<?php echo $view->getThemePath()?>/css/bundle.css">
 			
@@ -76,6 +77,8 @@
 			<meta name="twitter:title" content="<?php echo $title; ?>">
 			<meta name="twitter:description" content="<?php echo $desc; ?>">
 			<meta name="twitter:image" content="<?php echo $shareImage; ?>">
+
+
 
 			<script>
 				const pageTitle = "<?php echo $title; ?>";
@@ -106,4 +109,7 @@
 	    	<div class="<?php echo $c->getPageWrapperClass()?> content-wrapper">
 	    		<noscript><div class="no-script">This site requires JavaScript</div></noscript>
 
+	    		<header>
+	    			<img src="<?php echo $view->getThemePath()?>/images/logo.jpg" alt="The Family Learning School" title="The Family Learning School" />
+	    		</header>
 
