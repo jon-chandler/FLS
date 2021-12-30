@@ -2,7 +2,7 @@ main {
 	
 	form {
 
-		input, select, textarea {
+		input, select, textarea, button {
 			-webkit-appearance: none;
 			border-radius: $borderRadius;
 			border: 1px solid #999;
@@ -31,20 +31,36 @@ main {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-			width: 100%;
+			justify-content: space-between;
+			width: calc(100% - 20px);
 			margin-inline-start: 0;
 			margin-inline-end: 0;
 			padding-block-start: 0;
 			padding-block-end: 0;
 			padding-inline-start: 0;
 			padding-inline-end: 0;
-			border: none;
 			min-inline-size: min-content;
+			margin-bottom: $contentPadding;
+			padding-bottom: $contentPadding;
+			border: none;
+			border-bottom: 4px dashed rgba(#999, .5);
+			box-sizing: border-box;
 
+			fieldset {
+				border-bottom: none;
+				width: 100%;
+			}
+
+
+			&.password-update {
+				
+			}
+
+			
 			.ccm-attribute-address-composer-wrapper {
-				background: #E3E3E3;
 				display: flex;
 				flex-direction: row;
+				justify-content: space-between;
 				flex-wrap: wrap;
 				width: 100%;
 			}
@@ -52,14 +68,17 @@ main {
 			legend {
 				font-size: 1.4rem;
 				width: 100%;
+				padding: $contentPadding 0;
 			}
 
 			.form-group {
 				display: flex;
 				flex-direction: column;
-				max-width: 45%;
-				width: 45%;
+				max-width: 49%;
+				width: 49%;
+				box-sizing: border-box;
 				padding: $contentPadding;
+				padding-left: 0;
 
 				* {
 					width: 100%;
@@ -75,6 +94,18 @@ main {
 					-webkit-appearance: auto;
 					background: orange;
 				}
+
+				&.row {
+					width: 100% !important;
+					min-width: calc(100% + 20px);
+				}
+
+				button {
+					height: $contentPadding*2.5;
+					background-color: orange;
+				}
+
+
 
 			}
 		}
@@ -93,10 +124,20 @@ main {
 					margin-bottom: $contentPadding;
 				}
 
-				input, select, textarea {
+				input, textarea {
 					padding: 10px;
 					width: calc(100% - 20px) !important;
 				}
+
+				select {
+					padding: 10px;
+					width: 100% !important;
+				}
+
+				input[type=checkbox] {
+					width: 15px !important;
+				}
+
 			}
 
 		}
