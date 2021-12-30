@@ -1,6 +1,26 @@
 main {
 	
-	form {
+	.fls-profile {
+
+		.image-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			margin-top: $contentPadding*2;
+
+			h1 {
+				text-align: center;
+				width: 100%;
+				text-transform: uppercase;
+				font-weight: normal;
+			}
+
+			img {
+				width: 200px;
+				border-radius: 50%;
+			}
+		}
 
 		input, select, textarea, button {
 			-webkit-appearance: none;
@@ -92,17 +112,21 @@ main {
 					width: 15px;
 					padding: 0;
 					-webkit-appearance: auto;
-					background: orange;
+					background: $flsOrange;
 				}
 
 				&.row {
 					width: 100% !important;
-					min-width: calc(100% + 20px);
+					max-width: 100%;
+					padding: $contentPadding 0;
 				}
 
 				button {
 					height: $contentPadding*2.5;
-					background-color: orange;
+					background-color: $flsOrange;
+					color: #fff;
+					font-size: 1.2rem;
+					font-weight: 600;
 				}
 
 
@@ -136,6 +160,10 @@ main {
 
 				input[type=checkbox] {
 					width: 15px !important;
+				}
+
+				.form-actions {
+					max-width: 100% !important;
 				}
 
 			}

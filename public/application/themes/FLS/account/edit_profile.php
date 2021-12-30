@@ -5,14 +5,10 @@
 <main>
 <section class="fls-profile">
     <div class="user-info">
-    <h1><?= t($c->getCollectionName()) . ' - <span class="uc">' . t($profile->getUserName()); ?></span></h1>
-
-    <div vue-enabled>
-        <avatar-cropper v-bind:height="<?= Config::get('concrete.icons.user_avatar.height') ?>"
-            v-bind:width="<?= Config::get('concrete.icons.user_avatar.width') ?>"
-            uploadurl="<?= $save_url?>"
-            src="<?= $profile->getUserAvatar()->getPath() ?>">
-        </avatar-cropper>
+    
+    <div class="image-container">
+        <img src="<?php echo $profile->getUserAvatar()->getPath(); ?>" title="<?php t($profile->getUserName()); ?>" class="profile-img" />
+        <h1><?php echo t($profile->getUserName()); ?></h1>
     </div>
 
     <?php  if (isset($error) && $error != '') { ?>
