@@ -29,7 +29,9 @@
 						</tr>";
 				foreach($users as $i=>$user) {
 
-					$age = date_diff($user->getAttribute('dob'), $currDate);
+					$DOB = $user->getAttribute('dob');
+					$_DOB = $DOB->format('d/m/Y');
+					$age = date_diff($DOB, $currDate);
 					$years = round($age->days/365);
 
 					if(!empty($user->getAttribute('emergency_photo'))) {
@@ -43,10 +45,10 @@
 							<td class='img-holder'><img class='table-img' src='{$user->getUserAvatar()->getPath()}' title='{$user->getAttribute('firstName')}' /></td>
 							<td>{$user->getAttribute('firstName')}</td>
 							<td>{$user->getAttribute('lastName')}</td>
-							<td>{$years}</td>
+							<td title='{$_DOB}'>{$years}</td>
 							<td>{$user->getAttribute('class')}</td>
 							<td>{$user->getAttribute('key_teacher')}</td>
-							<td><div class='parent' data-parentImg='{$photo1}'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}</div><div class='parent' data-parentImg='{$photo2}'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}</div></td>
+							<td><div class='parent'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<img class='pic' src='{$photo1}' /></div><div class='parent'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}<img class='pic' src='{$photo2}' /></div></td>
 							<td><a href='tel:{$user->getAttribute('parent_contact_number')}'>{$user->getAttribute('parent_contact_number')}</a><br /><a href='tel:{$user->getAttribute('parent_contact_number_2')}'>{$user->getAttribute('parent_contact_number_2')}</a></td>
 							<td class='edit'><a href='dashboard/users/search/view/{$user->getUserID()}' class='edit-button' title='Edit'></a></td>
 						</tr>";

@@ -72,5 +72,26 @@
 			background: rgba(#E3E3E3, .2);
 		}
 
+		.parent {
+			position: relative;
+
+			.pic {
+				position: absolute;
+				top: -100%;
+				left: 50%;
+				width: 150px;
+				height: 150px;
+				display: none;
+				border: 1px solid #999;
+				border-radius: $borderRadius;
+				background-color: #fff;
+				z-index: 3;
+
+				&.show {
+					display: block;
+				}
+			}
+		}
+
 	}
 }

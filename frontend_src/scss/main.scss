@@ -28,6 +28,11 @@ body {
 
 .content-wrapper {
 	padding: $contentPadding;
+	position: relative;
+}
+
+main {
+	min-height: calc(70vh - 2.5rem);
 }
 
 a {
