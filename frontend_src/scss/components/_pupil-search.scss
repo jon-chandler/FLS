@@ -1,0 +1,47 @@
+.pupil-search {
+	width: 300px;
+	display: flex;
+
+	input {
+		width: 250px;
+		padding: 30px;
+	}
+
+	button {
+		background-image: url(../images/search.svg);
+		background-repeat: no-repeat;
+		background-size: 50px;
+	}
+}
+
+.search-results {
+	margin-top: 60px;
+
+	.pupil-list-table {
+		width: 100%;
+		cellspacing: 0;
+		cellmargin: 0;
+		border-collapse: collapse;
+
+		th {
+			background: rgba(#E3E3E3, .3);
+			text-align: left;
+			padding: 8px;
+		}
+
+		td {
+			border: thin solid rgba(#E3E3E3, .5);
+			padding: 8px;
+
+			&.img-holder, &.edit {
+				text-align: center;
+			}
+
+
+			img {
+				border-radius: 50%;
+				width: 60px;
+			}
+		}
+	}
+}
