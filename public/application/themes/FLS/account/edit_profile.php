@@ -7,7 +7,7 @@
     <div class="user-info">
     
     <div class="image-container">
-        <img src="<?php echo $profile->getUserAvatar()->getPath(); ?>" title="<?php t($profile->getUserName()); ?>" class="profile-img" />
+        <a href="/account/avatar"><img src="<?php echo $profile->getUserAvatar()->getPath(); ?>" title="<?php t($profile->getUserName()); ?>" class="profile-img" /></a>
         <h1><?php echo t($profile->getUserName()); ?></h1>
     </div>
 
