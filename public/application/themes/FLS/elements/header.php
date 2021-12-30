@@ -103,6 +103,6 @@
 	    		<noscript><div class="no-script">This site requires JavaScript</div></noscript>
 
 	    		<header>
-	    			<img src="<?php echo $view->getThemePath()?>/images/logo.jpg" alt="The Family Learning School" title="The Family Learning School" />
+	    			<a href="/" title="home"><img src="<?php echo $view->getThemePath()?>/images/logo.jpg" alt="The Family Learning School" title="The Family Learning School" /></a>
 	    		</header>
 

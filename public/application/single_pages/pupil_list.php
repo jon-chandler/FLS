@@ -23,8 +23,8 @@
 							<th>Age</th>
 							<th>Class</th>
 							<th>Key teacher</th>
-							<th>Parent</th>
-							<th>Contact #</th>
+							<th>Parents</th>
+							<th>Contact numbers</th>
 							<th></th>
 						</tr>";
 				foreach($users as $i=>$user) {
@@ -39,12 +39,14 @@
 							<td>{$years}</td>
 							<td>{$user->getAttribute('class')}</td>
 							<td>{$user->getAttribute('key_teacher')}</td>
-							<td>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}</td>
-							<td>{$user->getAttribute('parent_contact_number')}</td>
-							<td class='edit'><a href='dashboard/users/search/view/{$user->getUserID()}'><button>Edit</button></a></td>
+							<td>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<br />{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}</td>
+							<td><a href='tel:{$user->getAttribute('parent_contact_number')}'>{$user->getAttribute('parent_contact_number')}</a><br /><a href='tel:{$user->getAttribute('parent_contact_number_2')}'>{$user->getAttribute('parent_contact_number_2')}</a></td>
+							<td class='edit'><a href='dashboard/users/search/view/{$user->getUserID()}' class='edit-button' title='Edit'></a></td>
 						</tr>";
 				}
 				echo '</table>';
+			} else {
+				echo '<h3>No pupils found</h3>';
 			}
 
 
