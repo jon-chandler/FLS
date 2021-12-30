@@ -33,19 +33,27 @@
 					$_DOB = $DOB->format('d/m/Y');
 					$age = date_diff($DOB, $currDate);
 					$years = round($age->days/365);
+					$months = ($age->m != 0) ? "{$age->m} months" : "{$age->m} month"; 
+
+					if(!empty($user->getAttribute('parent_photo'))) {
+						$photo1 = $user->getAttribute('parent_photo')->getRelativePath();
+					}
+					if(!empty($user->getAttribute('parent_photo_2'))) {
+						$photo2 = $user->getAttribute('parent_photo_2')->getRelativePath();
+					}
 
 					if(!empty($user->getAttribute('emergency_photo'))) {
-						$photo1 = $user->getAttribute('emergency_photo')->getRelativePath();
+						$emergencyPhoto1 = $user->getAttribute('emergency_photo')->getRelativePath();
 					}
 					if(!empty($user->getAttribute('emergency_photo_2'))) {
-						$photo2 = $user->getAttribute('emergency_photo_2')->getRelativePath();
+						$emergencyPhoto2 = $user->getAttribute('emergency_photo_2')->getRelativePath();
 					}
 
 					echo "<tr>
 							<td class='img-holder'><img class='table-img' src='{$user->getUserAvatar()->getPath()}' title='{$user->getAttribute('firstName')}' /></td>
 							<td>{$user->getAttribute('firstName')}</td>
 							<td>{$user->getAttribute('lastName')}</td>
-							<td title='{$_DOB}'>{$years}</td>
+							<td title='{$_DOB}'>{$years} years - {$months}</td>
 							<td>{$user->getAttribute('class')}</td>
 							<td>{$user->getAttribute('key_teacher')}</td>
 							<td><div class='parent'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<img class='pic' src='{$photo1}' /></div><div class='parent'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}<img class='pic' src='{$photo2}' /></div></td>
