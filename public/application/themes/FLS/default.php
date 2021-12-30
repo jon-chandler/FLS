@@ -1,13 +1,11 @@
 <?php
 	defined('C5_EXECUTE') or die("Access Denied.");
 	$this->inc('elements/header.php');
-	$user = new User();
-	$userIsLoggedIn = $user->isLoggedIn();
-	$superUser = $user->isSuperUser();
+	$p = Page::getCurrentPage();
 ?>
 
 <main role="main">
-	<h1>PAGE NAME</h1>
+	<h1><?php echo $p->getCollectionName(); ?></h1>
 	<div class="full-width">
 		<?php 
 			$a = new Area('Full width content');
