@@ -34,7 +34,7 @@
 					$_DOB = $DOB->format('d/m/Y');
 					$age = date_diff($DOB, $currDate);
 					$years = round($age->days/365);
-					$months = ($age->m != 1) ? "{$age->m} months" : "{$age->m} month"; 
+					$months = ($age->m != 1) ? "{$age->m}mths" : "{$age->m}mth"; 
 
 					if(!empty($user->getAttribute('parent_photo'))) {
 						$photo1 = $user->getAttribute('parent_photo')->getRelativePath();
@@ -54,7 +54,7 @@
 							<td class='img-holder'><img class='table-img' src='{$user->getUserAvatar()->getPath()}' title='{$user->getAttribute('firstName')}' /></td>
 							<td>{$user->getAttribute('firstName')}</td>
 							<td>{$user->getAttribute('lastName')}</td>
-							<td title='{$_DOB}'>{$years} years - {$months}</td>
+							<td title='{$_DOB}'>{$years}yrs : {$months}</td>
 							<td>{$user->getAttribute('class')}</td>
 							<td>{$user->getAttribute('key_teacher')}</td>
 							<td><div class='parent'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<img class='pic' src='{$photo1}' /></div><div class='parent'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}<img class='pic' src='{$photo2}' /></div></td>
