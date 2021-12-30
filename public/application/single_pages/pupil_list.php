@@ -32,6 +32,13 @@
 					$age = date_diff($user->getAttribute('dob'), $currDate);
 					$years = round($age->days/365);
 
+					if(!empty($user->getAttribute('emergency_photo'))) {
+						$photo1 = $user->getAttribute('emergency_photo')->getRelativePath();
+					}
+					if(!empty($user->getAttribute('emergency_photo_2'))) {
+						$photo2 = $user->getAttribute('emergency_photo_2')->getRelativePath();
+					}
+
 					echo "<tr>
 							<td class='img-holder'><img class='table-img' src='{$user->getUserAvatar()->getPath()}' title='{$user->getAttribute('firstName')}' /></td>
 							<td>{$user->getAttribute('firstName')}</td>
@@ -39,7 +46,7 @@
 							<td>{$years}</td>
 							<td>{$user->getAttribute('class')}</td>
 							<td>{$user->getAttribute('key_teacher')}</td>
-							<td>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<br />{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}</td>
+							<td><div class='parent' data-parentImg='{$photo1}'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}</div><div class='parent' data-parentImg='{$photo2}'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}</div></td>
 							<td><a href='tel:{$user->getAttribute('parent_contact_number')}'>{$user->getAttribute('parent_contact_number')}</a><br /><a href='tel:{$user->getAttribute('parent_contact_number_2')}'>{$user->getAttribute('parent_contact_number_2')}</a></td>
 							<td class='edit'><a href='dashboard/users/search/view/{$user->getUserID()}' class='edit-button' title='Edit'></a></td>
 						</tr>";
