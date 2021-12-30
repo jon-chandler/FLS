@@ -4,7 +4,8 @@
 	$list = new \Concrete\Core\User\UserList();
 	$group = \Group::getByName('Administrators');
 	$list->filterByGroup($group, false);
-	$list->filterByFuzzyUsername($_REQUEST['query']);
+	$list->filterByAttribute("firstName", "%{$_REQUEST['query']}%", "LIKE");
+
 	$users = $list->getResults();
 
 	$currDate = new DateTime();
@@ -33,7 +34,7 @@
 					$_DOB = $DOB->format('d/m/Y');
 					$age = date_diff($DOB, $currDate);
 					$years = round($age->days/365);
-					$months = ($age->m != 0) ? "{$age->m} months" : "{$age->m} month"; 
+					$months = ($age->m != 1) ? "{$age->m} months" : "{$age->m} month"; 
 
 					if(!empty($user->getAttribute('parent_photo'))) {
 						$photo1 = $user->getAttribute('parent_photo')->getRelativePath();
