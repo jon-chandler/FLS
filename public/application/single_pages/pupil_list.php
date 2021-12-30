@@ -34,8 +34,13 @@
 					$_DOB = $DOB->format('d/m/Y');
 					$age = date_diff($DOB, $currDate);
 					$years = round($age->days/365);
-					$months = ($age->m != 1) ? "{$age->m}mths" : "{$age->m}mth"; 
+					$months = ($age->m != 1) ? "{$age->m}mths" : "{$age->m}mth";
 
+					$groups = $user->getUserObject()->getUserGroups();
+					$groupsVals = array_values($groups);
+					$group = Group::getByID($groupsVals[1]);
+					$className = explode(' ', $group->getGroupName())[1];
+					
 					if(!empty($user->getAttribute('parent_photo'))) {
 						$photo1 = $user->getAttribute('parent_photo')->getRelativePath();
 					}
@@ -55,7 +60,7 @@
 							<td>{$user->getAttribute('firstName')}</td>
 							<td>{$user->getAttribute('lastName')}</td>
 							<td title='{$_DOB}'>{$years}yrs : {$months}</td>
-							<td>{$user->getAttribute('class')}</td>
+							<td>{$className}</td>
 							<td>{$user->getAttribute('key_teacher')}</td>
 							<td><div class='parent'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<img class='pic' src='{$photo1}' /></div><div class='parent'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}<img class='pic' src='{$photo2}' /></div></td>
 							<td><a href='tel:{$user->getAttribute('parent_contact_number')}'>{$user->getAttribute('parent_contact_number')}</a><br /><a href='tel:{$user->getAttribute('parent_contact_number_2')}'>{$user->getAttribute('parent_contact_number_2')}</a></td>
