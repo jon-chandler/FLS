@@ -125,11 +125,16 @@ main {
 				button {
 					height: $contentPadding*2.5;
 					background-color: $flsOrange;
+					border: none;
 					color: #fff;
 					font-size: 1.2rem;
 					font-weight: 600;
+					height: 65px;
 				}
 
+				.control-label {
+					
+				}
 
 
 			}

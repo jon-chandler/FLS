@@ -4,8 +4,8 @@
 	$list = new \Concrete\Core\User\UserList();
 	$group = \Group::getByName('Administrators');
 	$list->filterByGroup($group, false);
-	//$list->filterByAttribute("firstName", "%{$_REQUEST['query']}%", "LIKE");
-	$list->filterByKeywords($_REQUEST['query']);
+	$list->filterByAttribute("firstName", "%{$_REQUEST['query']}%", "LIKE");
+	//$list->filterByKeywords($_REQUEST['query']);
 
 	$users = $list->getResults();
 

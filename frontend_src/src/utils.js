@@ -16,3 +16,16 @@ export function rollOverPopUpImage(el) {
 	}
 
 }
+
+
+export function hideCheckBoxLabels (el) {
+	if(!el) {
+		return
+	}
+
+	const nextEl = el.nextElementSibling
+	
+	if(nextEl.classList.contains('checkbox')) {
+		el.style.display = 'none'
+	}
+}
