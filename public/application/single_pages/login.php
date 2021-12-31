@@ -32,6 +32,7 @@ $attribute_mode = (isset($required_attributes) && count($required_attributes));
 ?>
 
 <div class="login-page">
+    <h1><?= !$attribute_mode ? t('Sign In.') : t('Required Attributes') ?></h1>
 
     <?php
     $disclaimer = new Area('Disclaimer');
@@ -40,7 +41,6 @@ $attribute_mode = (isset($required_attributes) && count($required_attributes));
             <?=$disclaimer->display($c);?>
         </div>
     <?php } ?>
-    <h1><?= !$attribute_mode ? t('Sign In.') : t('Required Attributes') ?></h1>
     <div class="col-sm-6 col-sm-offset-3 login-form">
         <div class="row">
             <div class="visible-xs ccm-authentication-type-select form-group text-center">

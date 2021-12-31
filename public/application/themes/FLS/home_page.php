@@ -4,16 +4,43 @@
 	$user = new User();
 	$userIsLoggedIn = $user->isLoggedIn();
 	$adminUsers = Group::getByName("Administrators");
+
+	$class1 = Group::getByName("Class 1");
+	$class2 = Group::getByName("Class 2");
+	$class3 = Group::getByName("Class 3");
 ?>
 
 <main role="main">
 	<div class="full-width">
+		<div class="homepage-options">
+			<?php
 
-		<?php
-			if($user->inGroup($adminUsers)) {
-				$this->inc('components/pupil_search.php', ['class' => 'homepage']);
-			}
-		?>
+				if($userIsLoggedIn) {
+					$ui = UserInfo::getByID($user->getUserID());
+					$userName = $ui->getAttribute('firstName');
+				}
+
+				if($_REQUEST['update']) {
+					echo 'Pupil details updated';
+				}
+
+				if($user->inGroup($adminUsers)) {
+					$this->inc('components/pupil_search.php', ['class' => 'homepage']);
+				}
+
+				if($user->inGroup($class1)) {
+					$this->inc('components/student_options.php', ['calLink' => '/class_1', 'userName' => $userName]);
+				}
+
+				if($user->inGroup($class2)) {
+					$this->inc('components/student_options.php', ['calLink' => '/class_2', 'userName' => $userName]);
+				}
+
+				if($user->inGroup($class3)) {
+					$this->inc('components/student_options.php', ['calLink' => '/class_3', 'userName' => $userName]);
+				}
+			?>
+		</div>
 
 		<?php 
 			$a = new Area('Full width content');

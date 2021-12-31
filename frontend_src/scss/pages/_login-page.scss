@@ -1,0 +1,86 @@
+.frm-button {
+	width: 100%;
+	height: 65px;
+	background-color: $flsOrange;
+	border-radius: $borderRadius;
+	border: none;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-top: 30px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+
+.login-page {
+	margin-top: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+
+
+	.login-form {
+		width: 400px;
+		height: 200px;
+		display: block;
+
+		.form-group {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: $contentPadding/2 0;
+
+			&:last-of-type {
+				flex-wrap: wrap;
+			}
+
+			&.ccm-authentication-type-select {
+				display: none;
+			}
+
+			input {
+				border-radius: $borderRadius;
+				border: thin solid #999;
+				//background-color: rgba($flsOrange, .2) !important;
+				padding: 15px;
+				width: 60%;
+			}
+
+			.btn-primary {
+				@extend .frm-button;
+				background-image: url(../images/lock-locked.svg);
+				background-size: 38px;
+				background-position: 65% 10px;
+				background-repeat: no-repeat;
+				background-repeat: no-repeat;
+			}
+
+			a.pull-right {
+				width: 100%;
+				padding-top: 20px;
+			}
+		}
+
+		.checkbox {
+			padding-top: 15px;
+		}
+
+	}
+
+	.forgotPassword {
+		.btn-primary {
+			@extend .frm-button;
+		}
+
+		.btn-block {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+}

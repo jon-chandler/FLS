@@ -4,6 +4,9 @@
 @import 'components/_footer';
 @import 'components/_pupil-search';
 
+@import 'pages/_homepage';
+@import 'pages/_login-page';
+
 html, body {
   	overflow-x: hidden;
 	-webkit-tap-highlight-color: transparent;
@@ -37,9 +40,27 @@ main {
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 	color: inherit;
 
 	&:hover {
 		opacity: .7;
 	}
+}
+
+button {
+	cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/* C5 overrides */
+
+#ccm-account-menu-container {
+	display: none;
 }

@@ -1,0 +1,41 @@
+.homepage-options {
+	margin-top: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+
+	.student-options {
+		width: 400px;
+		height: 200px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+
+		button {
+			width: 100px;
+			height: 100px;
+			display: block;
+			background-size: 50%;
+			background-position: 50%;
+			background-repeat: no-repeat;
+			border-radius: $borderRadius;
+			background-color: rgba(#999, .15);
+			border: thin solid rgba(#999, .3);
+
+			&.cal {
+				background-image: url(../images/calendar.svg);
+			}
+
+			&.profile {
+				background-image: url(../images/edit-profile.svg);
+			}
+
+			&.logout {
+				background-image: url(../images/lock.svg);
+			}
+
+		}
+	}
+}
