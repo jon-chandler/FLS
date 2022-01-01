@@ -4,9 +4,13 @@
 ?>
 
 <main role="main">
-	<div class="full-width message">
-		<h1>404</h1>
-		<h3>Page not found</h3>
+		<div class="user-msg">
+		<div>
+			<span style="text-align: center">
+				<h1 class="section-header">404</h1>
+				<p>Page not found</p>
+			</span>
+		</div>
 	</div>
 </main>
 
