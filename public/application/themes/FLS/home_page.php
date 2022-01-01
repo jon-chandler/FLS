@@ -12,16 +12,19 @@
 
 <main role="main">
 	<div class="full-width">
+
+		<?php 
+			if($_REQUEST['update']) {
+				echo '<div class="user-msg"><div>Pupil details updated</div></div>';
+			}
+		?>
+
 		<div class="homepage-options">
 			<?php
 
 				if($userIsLoggedIn) {
 					$ui = UserInfo::getByID($user->getUserID());
 					$userName = $ui->getAttribute('firstName');
-				}
-
-				if($_REQUEST['update']) {
-					echo 'Pupil details updated';
 				}
 
 				if($user->inGroup($adminUsers)) {

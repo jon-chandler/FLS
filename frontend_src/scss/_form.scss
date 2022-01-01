@@ -99,11 +99,17 @@ main {
 			.form-group {
 				display: flex;
 				flex-direction: column;
+				justify-content: center;
 				max-width: 49%;
 				width: 49%;
 				box-sizing: border-box;
 				padding: $contentPadding;
 				padding-left: 0;
+
+				&.flex-end {
+					justify-content: flex-end;
+					margin-bottom: 5px;
+				}
 
 				* {
 					width: 100%;
@@ -116,8 +122,7 @@ main {
 				input[type=checkbox] {
 					width: 15px;
 					padding: 0;
-					-webkit-appearance: auto;
-					background: $flsOrange;
+					-webkit-appearance: checkbox;
 				}
 
 				&.row {
@@ -134,7 +139,6 @@ main {
 
 				}
 
-
 			}
 		}
 
@@ -150,6 +154,11 @@ main {
 					max-width: 100%;
 					padding: 0;
 					margin-bottom: $contentPadding;
+
+					&.flex-end {
+						justify-content: center;
+						margin-bottom: 30px;
+					}
 				}
 
 				input, textarea {

@@ -26,8 +26,10 @@ export function hideCheckBoxLabels (el) {
 	}
 
 	const nextEl = el.nextElementSibling
-	
+	const parentEl = el.parentElement
+
 	if(nextEl.classList.contains('checkbox')) {
 		el.style.display = 'none'
+		parentEl.classList.add('flex-end')
 	}
 }
