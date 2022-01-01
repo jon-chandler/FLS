@@ -5,7 +5,7 @@
 ?>
 
 <main role="main">
-	<h1><?php echo $p->getCollectionName(); ?></h1>
+	<h1 class="section-heaader"><?php echo $p->getCollectionName(); ?></h1>
 	<div class="full-width">
 		<?php 
 			$a = new Area('Full width content');
