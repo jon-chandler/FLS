@@ -14,10 +14,9 @@
 <main>
     <div class="full-width">
         <section class="avatar">
-            
+            <h2 class="section-heaader">Edit photo</h2>
             <div class="avatar-content-wrapper">
                 <div class="avatar-holder" vue-enabled>
-                    <h2 class="section-heaader">Edit photo</h2>
                     <avatar-cropper  
                         v-bind:height="<?php echo $height; ?>"
                         v-bind:width="<?php echo $width; ?>"

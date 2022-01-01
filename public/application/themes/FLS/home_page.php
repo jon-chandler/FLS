@@ -8,6 +8,10 @@
 	$class1 = Group::getByName("Class 1");
 	$class2 = Group::getByName("Class 2");
 	$class3 = Group::getByName("Class 3");
+
+	$isAdmin = $user->inGroup($adminUsers);
+
+	$header = ($isAdmin) ? 'Search pupils' : '';
 ?>
 
 <main role="main">
@@ -27,7 +31,7 @@
 					$userName = $ui->getAttribute('firstName');
 				}
 
-				if($user->inGroup($adminUsers)) {
+				if($isAdmin) {
 					$this->inc('components/pupil_search.php', ['class' => 'homepage']);
 				}
 
