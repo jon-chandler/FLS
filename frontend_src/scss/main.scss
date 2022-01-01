@@ -4,6 +4,7 @@
 @import 'components/_header';
 @import 'components/_footer';
 @import 'components/_pupil-search';
+@import 'components/_calendar';
 
 @import 'pages/_homepage';
 @import 'pages/_login-page';
@@ -31,6 +32,7 @@ html {
 body {
 	font-family: 'Poppins', Arial, Sans;
 	font-size: calc((1 - 1) * 1.2vw + 1rem);
+	color: #666;
 }
 
 .content-wrapper {
