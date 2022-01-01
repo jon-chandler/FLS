@@ -8,10 +8,12 @@ export function rollOverPopUpImage(el) {
 	if(emImg.getAttribute('src').length) {
 		el.addEventListener('mouseenter', (e)=> {
 			emImg.classList.add('show')
+			el.classList.add('show')
 		})
 
 		el.addEventListener('mouseout', (e)=> {
 			emImg.classList.remove('show')
+			el.classList.remove('show')
 		})
 	}
 

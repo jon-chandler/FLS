@@ -1,18 +1,3 @@
-.frm-button {
-	width: 100%;
-	height: 65px;
-	background-color: $flsOrange;
-	border-radius: $borderRadius;
-	border: none;
-	color: #fff;
-	font-size: 1.2rem;
-	font-weight: 600;
-	margin-top: 30px;
-	padding-top: 5px;
-	text-align: center;
-}
-
-
 .login-page {
 	margin-top: 60px;
 	display: flex;
@@ -45,7 +30,6 @@
 			input {
 				border-radius: $borderRadius;
 				border: thin solid #999;
-				//background-color: rgba($flsOrange, .2) !important;
 				padding: 15px;
 				width: 60%;
 			}
@@ -53,10 +37,6 @@
 			.btn-primary {
 				@extend .frm-button;
 				background-image: url(../images/lock-locked.svg);
-				background-size: 38px;
-				background-position: 65% 10px;
-				background-repeat: no-repeat;
-				background-repeat: no-repeat;
 			}
 
 			a.pull-right {
@@ -80,6 +60,14 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+
+		button[name="resetPassword"] {
+		  font-size: 0;
+		  @extend .frm-button;
+		  position: relative;
+		  background-image: url(../images/reset.svg);
+		  background-position: 50%;
 		}
 	}
 

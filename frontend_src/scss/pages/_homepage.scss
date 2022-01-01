@@ -12,17 +12,8 @@
 		align-items: center;
 		justify-content: space-between;
 
-
 		button {
-			width: 100px;
-			height: 100px;
-			display: block;
-			background-size: 50%;
-			background-position: 50%;
-			background-repeat: no-repeat;
-			border-radius: $borderRadius;
-			background-color: rgba(#999, .15);
-			border: thin solid rgba(#999, .3);
+			@extend .homepage-button;
 
 			&.cal {
 				background-image: url(../images/calendar.svg);

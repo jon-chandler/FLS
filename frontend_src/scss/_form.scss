@@ -46,6 +46,10 @@ main {
 			background-position: 98% 10px;
 			background-size: 20px;
 			background-image: url(../images/chevron.svg);
+
+			&:hover {
+				background-size: 22px;
+			}
 		}
 
 		fieldset {
@@ -123,17 +127,11 @@ main {
 				}
 
 				button {
-					height: $contentPadding*2.5;
-					background-color: $flsOrange;
-					border: none;
-					color: #fff;
-					font-size: 1.2rem;
-					font-weight: 600;
-					height: 65px;
+					@extend .frm-button;
 				}
 
 				.control-label {
-					
+
 				}
 
 

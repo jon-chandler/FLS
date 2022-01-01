@@ -1,11 +1,14 @@
 @import '_vars';
-@import '_form';
+
+@import 'components/_buttons';
 @import 'components/_header';
 @import 'components/_footer';
 @import 'components/_pupil-search';
 
 @import 'pages/_homepage';
 @import 'pages/_login-page';
+
+@import '_form';
 
 html, body {
   	overflow-x: hidden;
