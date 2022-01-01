@@ -27,6 +27,7 @@
 							<th>Key teacher</th>
 							<th>Parents</th>
 							<th>Contact numbers</th>
+							<th>Allergies/Dietary needs</th>
 							<th></th>
 						</tr>";
 				foreach($users as $i=>$user) {
@@ -41,6 +42,8 @@
 					$groupsVals = array_values($groups);
 					$group = Group::getByID($groupsVals[1]);
 					$className = explode(' ', $group->getGroupName())[1];
+
+					$allergies = ($user->getAttribute('allergies_diet')) ? $user->getAttribute('allergies_diet') : 'N/A';
 					
 					if(!empty($user->getAttribute('parent_photo'))) {
 						$photo1 = $user->getAttribute('parent_photo')->getRelativePath();
@@ -63,8 +66,9 @@
 							<td title='{$_DOB}'>{$years}yrs : {$months}</td>
 							<td>{$className}</td>
 							<td>{$user->getAttribute('key_teacher')}</td>
-							<td><div class='parent'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<img class='pic' src='{$photo1}' /></div><div class='parent'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}<img class='pic' src='{$photo2}' /></div></td>
+							<td><div class='parent'>{$user->getAttribute('parent_f_name')} {$user->getAttribute('parent_l_name')}<div class='pic' style='background-image: url({$photo1})' data-img='{$photo1}'></div></div><div class='parent'>{$user->getAttribute('parent_f_name_2')} {$user->getAttribute('parent_l_name_2')}<div class='pic' style='background-image: url({$photo2})' data-img='{$photo2}'></div></div></td>
 							<td><a href='tel:{$user->getAttribute('parent_contact_number')}'>{$user->getAttribute('parent_contact_number')}</a><br /><a href='tel:{$user->getAttribute('parent_contact_number_2')}'>{$user->getAttribute('parent_contact_number_2')}</a></td>
+							<td>{$allergies}</td>
 							<td class='edit'><a href='dashboard/users/search/view/{$user->getUserID()}' class='edit-button' title='Edit'></a></td>
 						</tr>";
 				}

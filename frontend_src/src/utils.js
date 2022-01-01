@@ -5,7 +5,7 @@ export function rollOverPopUpImage(el) {
 
 	const emImg = el.querySelector('.pic')
 
-	if(emImg.getAttribute('src').length) {
+	if(emImg.dataset.img !='') {
 		el.addEventListener('mouseenter', (e)=> {
 			emImg.classList.add('show')
 			el.classList.add('show')

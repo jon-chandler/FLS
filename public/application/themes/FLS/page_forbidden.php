@@ -4,9 +4,13 @@
 ?>
 
 <main role="main">
-	<div class="full-width message">
-		<h1>Sorry</h1>
-		<p>This content isn't for you</p>
+	<div class="user-msg">
+		<div>
+			<span style="text-align: center">
+				<h1>Sorry</h1>
+				<p>This content isn't for you</p>
+			</span>
+		</div>
 	</div>
 </main>
 

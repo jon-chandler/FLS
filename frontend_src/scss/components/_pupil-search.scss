@@ -34,12 +34,13 @@
 
 .search-results {
 	margin-top: 60px;
+	overflow-x: auto;
 
 	.pupil-list-table {
 		width: 100%;
-		cellspacing: 0;
-		cellmargin: 0;
 		border-collapse: collapse;
+		position: relative;
+		margin-bottom: 100px;
 
 		th {
 			background: rgba(#E3E3E3, .3);
@@ -100,19 +101,22 @@
 				border-color: transparent #FFF;
 				border-width: 20px 20px 20px 0;
 				top: -8px;
-				left: 125px;
+				left: 130px;
 				z-index: 3;
 			}
 
 			.pic {
 				position: absolute;
 				top: -70px;
-				left: 70%;
+				left: 150px;
 				width: 150px;
 				height: 150px;
 				display: none;
 				border-radius: $borderRadius;
 				background-color: #fff;
+				background-size: cover;
+				background-position: 50%;
+				border: 10px solid #fff;
 				z-index: 3;
 				padding: 10px;
 				filter: drop-shadow(6px 6px 10px #999);
