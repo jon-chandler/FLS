@@ -1,0 +1,47 @@
+.avatar {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+
+    .avatar-content-wrapper {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+
+        .avatar-holder {
+            width: 400px;
+
+            .ccm-avatar-creator-container {
+
+                left: calc(50% - 100px);
+
+                .ccm-avatar-creator {
+                    &:hover {
+                        box-shadow: (0px 0px 15px 1px rgba($flsOrange, .3));
+                    }
+
+                    &:before {
+                        color: $flsOrange;
+                    }
+                }
+            }
+        }            
+
+        button {
+            @extend .frm-button;
+            
+
+            &.delete {
+                color: #999;
+                background-color: rgba(#999, .3);
+            }
+        }
+
+    }
+
+}

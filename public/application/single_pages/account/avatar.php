@@ -13,11 +13,11 @@
 
 <main>
     <div class="full-width">
-        <section class="fls-profile restricted-content">
+        <section class="avatar">
             
             <div class="avatar-content-wrapper">
-                <div vue-enabled>
-                    <h2><?php echo $c->getCollectionName(); ?></h2>
+                <div class="avatar-holder" vue-enabled>
+                    <h2 class="section-heaader">Edit photo</h2>
                     <avatar-cropper  
                         v-bind:height="<?php echo $height; ?>"
                         v-bind:width="<?php echo $width; ?>"
@@ -28,7 +28,7 @@
                     <?php if ($profile->hasAvatar()) { ?>
                         <form method="post" action="<?php echo $view->action('delete'); ?>">
                             <?php echo $token->output('delete_avatar'); ?>
-                            <button class="" title="Delete">Delete picture</button>
+                            <button class="delete" title="Delete">Delete photo</button>
                         </form>
                     <?php } ?>
 
@@ -36,7 +36,7 @@
 
                     <div class="ccm-dashboard-form-actions-wrapper">
                         <div class="ccm-dashboard-form-actions">
-                            <a href="<?php echo URL::to('/pupil'); ?>" /><button class="" title="Your profile">Profile</button></a>
+                            <a href="<?php echo URL::to('/account/edit_profile'); ?>" /><button class="profile-link" title="Edit details">Edit pupil details</button></a>
                         </div>
                     </div>
                 </div>
