@@ -1,9 +1,9 @@
 footer {
 	padding-bottom: $contentPadding;
-	position: absolute;
+	position: sticky;
   	width: 100%;
   	height: 2.5rem;
-  	padding-top: 40px;
+  	margin-top: 60px;
 
 	address {
 		font-style: initial;

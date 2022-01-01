@@ -65,7 +65,6 @@
 		button[name="resetPassword"] {
 		  font-size: 0;
 		  @extend .frm-button;
-		  position: relative;
 		  background-image: url(../images/reset.svg);
 		  background-position: 50%;
 		}

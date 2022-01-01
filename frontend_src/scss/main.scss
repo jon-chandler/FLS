@@ -67,3 +67,29 @@ input:-webkit-autofill:active{
 #ccm-account-menu-container {
 	display: none;
 }
+
+.alert-dismissable {
+	width: 100%;
+	text-align: left;
+	padding: $contentPadding;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: $contentPadding;
+		width: 380px;
+		border: thin solid $flsOrange;
+		border-radius: $borderRadius;
+		background: #fff;
+		margin-left: -25px;
+		filter: drop-shadow(6px 6px 10px rgba(#999, .3));
+	}
+
+	.close {
+		display: none;
+	}
+}
