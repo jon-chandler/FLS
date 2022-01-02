@@ -141,9 +141,8 @@ class Controller extends BlockController
 
             foreach ($results as $i=>$occurrence) {
                 $event = $occurrence->getEvent();
-                //$background = $formatter->getEventOccurrenceBackgroundColor($occurrence);
                 
-                $background = ($event->getAttribute('shared_event') == 'Yes') ? '#4272d2' : '#f05a28';
+                $background = ($event->getAttribute('shared_event') == 'Yes') ? '#f05a28' : $formatter->getEventOccurrenceBackgroundColor($occurrence);
 
                 $text = $formatter->getEventOccurrenceTextColor($occurrence);
                 $obj = new \stdClass();
